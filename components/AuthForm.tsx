@@ -23,7 +23,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { auth } from "@/firebase/client";
-import { signIn, signUp, signInWithGoogle } from "@/lib/auth.actions";
+import { signIn, signUp, signInWithGoogle } from "@/lib/actions/auth.actions";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 const righteous = Righteous({ subsets: ["latin"], weight: "400" });
@@ -141,7 +141,7 @@ export default function AuthForm({ type }: { type: FormType }) {
             aria-hidden="true"
           >
             <p
-              className={`${righteous.className} text-4xl text-black capitalize`}
+              className={`${righteous.className} text-4xl text-black dark:text-white capitalize`}
             >
               S
             </p>
@@ -186,7 +186,11 @@ export default function AuthForm({ type }: { type: FormType }) {
                 />
               </div>
             </div>
-            <Button type="submit" className="w-full">
+            <Button
+              type="submit"
+              className="w-full"
+              disabled={form.formState.isSubmitting}
+            >
               {form.formState.isSubmitting
                 ? "Loading..."
                 : isSignIn

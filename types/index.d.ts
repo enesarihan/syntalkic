@@ -50,9 +50,9 @@ interface InterviewCardProps {
 interface AgentProps {
   userName: string;
   userId?: string;
-  interviewId?: string;
+  syntalkicId?: string;
   feedbackId?: string;
-  type: "generate" | "interview";
+  type: "generate" | "syntalkic";
   questions?: string[];
 }
 
