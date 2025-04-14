@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { GradientButton } from "@/components/ui/gradient-button";
+import Link from "next/link";
 
 const Home: React.FC = () => {
   return (
@@ -27,8 +28,10 @@ const Home: React.FC = () => {
                 </p>
               </div>
               <div className="space-x-4">
-                <GradientButton variant={"variant"}>
-                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                <GradientButton variant={"variant"} asChild>
+                  <Link href={"/chats"}>
+                    Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </GradientButton>
               </div>
             </div>
@@ -168,7 +171,9 @@ const Home: React.FC = () => {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <GradientButton className="w-full">Try it Free</GradientButton>
+                <GradientButton className="w-full" asChild>
+                  <Link href={"/chats"}>Try it Free!</Link>
+                </GradientButton>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                   No credit card required. Cancel anytime.
                 </p>

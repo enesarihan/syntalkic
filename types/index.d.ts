@@ -13,15 +13,13 @@ interface Feedback {
   createdAt: string;
 }
 
-interface Interview {
+interface Syntalkic {
   id: string;
   role: string;
-  level: string;
+  topic: string;
   questions: string[];
-  techstack: string[];
   createdAt: string;
   userId: string;
-  type: string;
   finalized: boolean;
 }
 
@@ -38,12 +36,11 @@ interface User {
   id: string;
 }
 
-interface InterviewCardProps {
+interface SyntalkicCardProps {
   id?: string;
   userId?: string;
   role: string;
-  type: string;
-  techstack: string[];
+  topic: string;
   createdAt?: string;
 }
 
@@ -66,7 +63,7 @@ interface GetFeedbackByInterviewIdParams {
   userId: string;
 }
 
-interface GetLatestInterviewsParams {
+interface GetLatestSyntalkicsParams {
   userId: string;
   limit?: number;
 }

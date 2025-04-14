@@ -71,12 +71,12 @@ const Agent = ({
   useEffect(() => {
     if (callStatus === CallStatus.FINISHED) {
       if (type === "generate") {
-        router.push("/");
+        router.push("/chats");
       } else {
         // handle generate feedback
       }
     }
-    if (callStatus === CallStatus.FINISHED) router.push("/");
+    if (callStatus === CallStatus.FINISHED) router.push("/chats");
   }, [messages, callStatus, type, userId]);
 
   const handleCall = async () => {
@@ -119,7 +119,7 @@ const Agent = ({
   return (
     <>
       <div className="call-view">
-        <div className="card-interviewer">
+        <div className="card-syntalker">
           <div className="avatar">
             <p
               className={`${righteous.className} text-8xl text-black dark:text-white capitalize`}

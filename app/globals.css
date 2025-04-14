@@ -325,7 +325,7 @@
       @apply text-center text-primary-100 mt-5;
     }
 
-    .card-interviewer {
+    .card-syntalker {
       @apply flex-center flex-col gap-2 p-7 h-[400px] blue-gradient-dark rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full;
     }
 
@@ -378,11 +378,11 @@
     @apply flex flex-row blue-gradient-dark rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4;
   }
 
-  .interviews-section {
+  .syntalkics-section {
     @apply flex flex-wrap gap-4 max-lg:flex-col w-full items-stretch;
   }
 
-  .interview-text {
+  .syntalkic-text {
     @apply text-lg text-center text-white;
   }
 
@@ -394,7 +394,7 @@
     @apply absolute bottom-full mb-1 hidden group-hover:flex px-2 py-1 text-xs text-white bg-gray-700 rounded-md shadow-md;
   }
 
-  .card-interview {
+  .card-syntalkic {
     @apply dark-gradient rounded-2xl min-h-full flex flex-col p-6 relative overflow-hidden gap-10 justify-between;
 
     .badge-text {
