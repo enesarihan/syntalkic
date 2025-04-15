@@ -9,8 +9,10 @@ const righteous = Righteous({
 const AuthLayout = async ({ children }: { children: ReactNode }) => {
   return (
     <div className="auth-layout">
-      <div className="flex flex-col gap-2 justify-center items-center text-8xl md:text-9xl">
-        <p className={`${righteous.className}`}>Syntalkic.</p>
+      <div className="flex flex-col gap-2 justify-center items-center">
+        <p className={`${righteous.className} text-6xl md:text-9xl`}>
+          Syntalkic.
+        </p>
         {children}
       </div>
     </div>

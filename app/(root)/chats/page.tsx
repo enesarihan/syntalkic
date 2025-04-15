@@ -31,7 +31,7 @@ const ChatPages = async () => {
         </div>
         <Image
           alt="robo"
-          className="hidden ml-16 rounded-2xl md:block"
+          className="hidden ml-16 rounded-xl md:block mask-b-from-3.5"
           src={"/robot-girl.png"}
           width={200}
           height={200}
@@ -45,11 +45,11 @@ const ChatPages = async () => {
               <SyntalkicCard {...syntalkic} key={syntalkic.id} />
             ))
           ) : (
-            <p>You have&apos;t taken any syntalkics yet</p>
+            <p>You haven&apos;t taken any syntalkics yet.</p>
           )}
         </div>
       </section>
-      <section className="flex flex-col gap-6 mt-8">
+      <section className="flex flex-col gap-6 mt-8 mb-24">
         <h2>Take from another Syntalkers</h2>
         <div className="syntalkics-section">
           {hasUpcomingSyntalkics ? (
@@ -57,7 +57,7 @@ const ChatPages = async () => {
               <SyntalkicCard {...syntalkic} key={syntalkic.id} />
             ))
           ) : (
-            <p>There are no new syntalkics available</p>
+            <p>There are no new syntalkics available.</p>
           )}
         </div>
       </section>
