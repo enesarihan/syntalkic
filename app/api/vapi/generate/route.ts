@@ -13,7 +13,7 @@ export async function POST(request: Request) {
         The conversation topic is: ${topic}.
         The desired number of questions is: ${amount}.
         The user wants to engage in a conversation with someone who is a: ${role}.
-        Generate questions that this person (${role}) would naturally ask, keeping them engaging and varied in type.
+        Generate questions that this person (${role}) would naturally ask, keeping them engaging,varied in type and address to people ${role} like this.
         Ensure the questions cover a range of conversational styles, including open-ended, thought-provoking, and light-hearted inquiries.
         Return only the questions in a JSON array format. Do not include any additional text or explanations.
         The questions will be read by a voice assistant, so avoid using any special characters like / or * that could interfere with speech synthesis.

@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 const SyntalkicCard = ({ id, role, topic, createdAt }: SyntalkicCardProps) => {
   const formattedDate = dayjs(createdAt || Date.now()).format("MMM D , YYYY");
   return (
-    <div className="card-border w-[360px] max-sm:w-full min-h-96">
+    <div className="card-border w-[360px] max-sm:w-full min-h-32">
       <div className="card-syntalkic">
         <div>
           <div className="absolute top-0 right-0 w-fit px-4 py-2 rounded-bl-lg bg-light-600">
@@ -30,7 +30,7 @@ const SyntalkicCard = ({ id, role, topic, createdAt }: SyntalkicCardProps) => {
           </div>
         </div>
         <div className="flex flex-row justify-between">
-          <Button className="btn-primary">
+          <Button className="not-dark:bg-gray-600">
             <Link href={`/syntalkic/${id}`}>View Syntalkic</Link>
           </Button>
         </div>

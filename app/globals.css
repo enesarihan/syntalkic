@@ -295,7 +295,7 @@
   }
 
   .card-border {
-    @apply border-gradient p-0.5 rounded-2xl w-fit;
+    @apply border-gradient-light dark:border-gradient p-0.5 rounded-2xl w-fit;
   }
 
   .card {
@@ -326,7 +326,7 @@
     }
 
     .card-syntalker {
-      @apply flex-center flex-col gap-2 p-7 h-[400px] blue-gradient-dark rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full;
+      @apply flex-center flex-col gap-2 p-7 h-[400px] light-gradient dark:blue-gradient-dark rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full;
     }
 
     .avatar {
@@ -342,7 +342,7 @@
     }
 
     .card-content {
-      @apply flex flex-col gap-2 justify-center items-center p-7 dark-gradient rounded-2xl min-h-full;
+      @apply flex flex-col gap-2 justify-center items-center p-7 white-gradient dark:dark-gradient rounded-2xl min-h-full;
     }
   }
 
@@ -375,7 +375,7 @@
   }
 
   .card-cta {
-    @apply flex flex-row blue-gradient-dark rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4;
+    @apply flex flex-row light-gradient dark:blue-gradient-dark rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4;
   }
 
   .syntalkics-section {
@@ -395,7 +395,7 @@
   }
 
   .card-syntalkic {
-    @apply dark-gradient rounded-2xl min-h-full flex flex-col p-6 relative overflow-hidden gap-10 justify-between;
+    @apply white-gradient dark:dark-gradient rounded-2xl min-h-full flex flex-col p-6 relative overflow-hidden gap-10 justify-between;
 
     .badge-text {
       @apply text-sm font-semibold capitalize;
@@ -490,8 +490,16 @@
   @apply bg-gradient-to-b from-[#1A1C20] to-[#08090D];
 }
 
+@utility white-gradient {
+  @apply bg-gradient-to-b from-[#eff1ee] to-[#ffffff];
+}
+
 @utility border-gradient {
   @apply bg-gradient-to-b from-[#4B4D4F] to-[#4B4D4F33];
+}
+
+@utility border-gradient-light {
+  @apply bg-gradient-to-b from-[#868686] to-[#86868633];
 }
 
 @utility pattern {
@@ -499,7 +507,11 @@
 }
 
 @utility blue-gradient-dark {
-  @apply bg-gradient-to-b from-[#171532] to-[#08090D];
+  @apply bg-gradient-to-b from-[#0f2255] to-[#08090D];
+}
+
+@utility light-gradient {
+  @apply bg-gradient-to-b from-[#8e9aaf] to-[#ffffff];
 }
 
 @utility blue-gradient {
