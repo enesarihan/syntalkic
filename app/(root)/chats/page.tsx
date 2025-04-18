@@ -20,7 +20,7 @@ const ChatPages = async () => {
   return (
     <>
       <section className="card-cta">
-        <div className="flex flex-col gap-6 max-w-lg">
+        <div className="flex flex-col gap-6 max-w-lg text-white">
           <h2>Get Your Syntalkic Ready with AI-Powered Chat</h2>
           <p className="text-lg">
             Ask your questions, get information, and request assistance.
@@ -37,7 +37,7 @@ const ChatPages = async () => {
           height={200}
         />
       </section>
-      <section className="flex flex-col gap-6 mt-8">
+      <section className="flex flex-col gap-6 mt-8 text-white">
         <h2>Your Syntalkics</h2>
         <div className="syntalkics-section">
           {hasPastSyntalkics ? (
@@ -49,7 +49,7 @@ const ChatPages = async () => {
           )}
         </div>
       </section>
-      <section className="flex flex-col gap-6 mt-8 mb-24">
+      <section className="flex flex-col gap-6 mt-8 mb-24 text-white">
         <h2>Take from another Syntalkers</h2>
         <div className="syntalkics-section">
           {hasUpcomingSyntalkics ? (
