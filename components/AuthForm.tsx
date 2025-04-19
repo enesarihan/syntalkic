@@ -12,7 +12,6 @@ import { FaGoogle } from "react-icons/fa";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Righteous } from "next/font/google";
 import { Form } from "./ui/form";
 import FormField from "./FormField";
 import Link from "next/link";
@@ -26,7 +25,7 @@ import { auth } from "@/firebase/client";
 import { signIn, signUp, signInWithGoogle } from "@/lib/actions/auth.actions";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-const righteous = Righteous({ subsets: ["latin"], weight: "400" });
+import Logo from "./Logo";
 
 const authFormSchema = (type: FormType) => {
   return z.object({
@@ -140,11 +139,10 @@ export default function AuthForm({ type }: { type: FormType }) {
             className="flex size-11 shrink-0 items-center justify-center rounded-full border border-border"
             aria-hidden="true"
           >
-            <p
-              className={`${righteous.className} text-4xl text-black dark:text-white capitalize`}
-            >
-              S
-            </p>
+            <Logo
+              type="single"
+              className="text-4xl text-black dark:text-white capitalize"
+            />
           </div>
           <DialogHeader>
             <DialogTitle className="sm:text-center">Welcome back</DialogTitle>
@@ -205,8 +203,7 @@ export default function AuthForm({ type }: { type: FormType }) {
         </div>
 
         <Button variant="outline" onClick={signInWithGoogleClient}>
-          <FaGoogle />
-          Login with Google
+          <FaGoogle className="mr-2" /> Login with Google
         </Button>
 
         <p className="text-center">

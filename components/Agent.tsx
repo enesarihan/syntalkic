@@ -1,14 +1,12 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { vapi } from "@/lib/vapi.sdk";
-import { Righteous } from "next/font/google";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { GradientButton } from "./ui/gradient-button";
 import { syntalker } from "@/constants";
-
-const righteous = Righteous({ subsets: ["latin"], weight: "400" });
+import Logo from "./Logo";
 
 enum CallStatus {
   INACTIVE = "INACTIVE",
@@ -121,11 +119,7 @@ const Agent = ({
       <div className="call-view">
         <div className="card-syntalker">
           <div className="avatar">
-            <p
-              className={`${righteous.className} text-8xl text-black dark:text-white capitalize`}
-            >
-              S
-            </p>
+            <Logo type="single" className="text-8xl text-black capitalize" />
             {isSpeaking && <span className="animate-speak"></span>}
           </div>
           <h3>AI</h3>

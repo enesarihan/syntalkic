@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { ReactNode } from "react";
-import { Righteous } from "next/font/google";
 import { getCurrentUser, isAuthenticated } from "@/lib/actions/auth.actions";
 import { redirect } from "next/navigation";
 import { ModeToggle } from "@/components/Mode-toggle";
 import SignOutButton from "@/components/Sign-Out-Button";
-
-const righteous = Righteous({ subsets: ["latin"], weight: "400" });
+import Logo from "@/components/Logo";
 
 const RootLayouts = async ({ children }: { children: ReactNode }) => {
   const isUserAuthenticated = await isAuthenticated();
@@ -17,7 +15,7 @@ const RootLayouts = async ({ children }: { children: ReactNode }) => {
     <div className="root-layout">
       <nav className="flex justify-between">
         <Link href={"/"} className="flex items-center gap-2">
-          <h2 className={`${righteous.className}`}>Syntalkic.</h2>
+          <Logo type="full" className="" />
         </Link>
         <div className="flex flex-row gap-2">
           <ModeToggle />

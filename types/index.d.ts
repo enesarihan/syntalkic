@@ -94,3 +94,8 @@ interface InterviewFormProps {
 interface TechIconProps {
   techStack: string[];
 }
+
+interface LogoProps {
+  className: string;
+  type: "full" | "single";
+}
